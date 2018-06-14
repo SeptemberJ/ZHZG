@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="firstItem">
+    <text>单号：{{fbillno}}</text>
+    <text class="toright">{{orderInfor.fdate}}</text>
+  </view>
+
+  <view class="secondItem">
+    <text>服务方式：{{orderInfor.fservice}}</text>
+    <text>预约上门时间：{{orderInfor.freserve_time}}</text>
+  </view>
+
+  <view class="thirdItem">
+    <text class="tit">问题描述：</text>
+    <text>{{orderInfor.fproblem}}</text>
+  </view>
+
+  <view class="fourItem" wx:if="{{orderInfor.fpicture!='' || orderInfor.fvideo!=''}}">
+    <text class="tit">附加信息：</text>
+ 
+   <view class="section tc"  wx:if="{{orderInfor.fpicture!=''}}">
+    <image class="dispatchImg"  src="{{orderInfor.fpicture}}" data-url="{{orderInfor.fpicture}}" mode="scaleToFill" bindtap="previewImage"></image>
+  </view>
+
+  <view class="section tc"  wx:if="{{orderInfor.fvideo!=''}}">
+    <video class="myVideo"src="{{orderInfor.fvideo}}" controls></video>
+  </view>
+
+   </view>
+
+    <view class="fiveItem">
+		  <view class="address">
+        <view class="address_item contact">
+          <text>联系人：{{orderInfor.fcontact}}</text>
+          <text>电话：{{orderInfor.fmobile}}</text>
+        </view>
+        <view class="address_item detail">
+          <text>地址：{{orderInfor.faddress}}</text>
+        </view>
+		  </view>
+    </view>
+    <!--填写服务总结-->
+    <view class="sixItem" wx:if="{{userRole==1 && orderInfor.fstatus==2}}">
+      <text>服务总结：</text>
+      <textarea placeholder="请填写服务描述" bindinput="changeAttachInfo" value="{{AttachInfo}}" />
+      <!--<input placeholder="请填写服务描述" bindinput="changeAttachInfo" value="{{AttachInfo}}"/>-->
+    </view>
+    <!--显示服务总结-->
+    <view class="sixItem" wx:if="{{orderInfor.fstatus==3}}">
+      <text>服务总结：</text>
+      <text>{{orderInfor.fserverdetail==null?'该工程师未做总结':orderInfor.fserverdetail}}</text>
+    </view>
+  
+  <button wx:if="{{userRole==1 && orderInfor.fstatus==1}}" type="warn" class="confirm" bindtap="confirm">接单</button>
+  <button wx:if="{{userRole==1 && orderInfor.fstatus==2}}" type="warn" class="confirm" bindtap="finish" disabled="{{canDo}}">确认完成</button>
+  <button wx:if="{{userRole==0 && orderInfor.fstatus==0}}" type="warn" class="confirm" bindtap="cancel">取消订单</button>
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

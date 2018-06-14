@@ -1,0 +1,148 @@
+<view class="qrcode">
+  <image src="../../image/icon/code.png" bindtap="scanCode"></image>
+</view>
+
+<!--工程师-->
+<view wx:if="{{userRole==1}}" class="container">
+  <view class="tit">
+    <text></text>
+  </view>
+  <!--四方格-->
+  <view class="fourBox">
+    <view class="line">
+      <view class="item wait" data-class="0" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/Bell.png"></image>
+          <text>待接单</text>
+        </view>
+        <view class="msgDot">{{counts.count1}}</view>
+      </view>
+      <view class="item today" data-class="1" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/today.png"></image>
+          <text>待维修</text>
+        </view>
+        <view class="msgDot">{{counts.count2}}</view>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item wait" data-class="2" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/maintain.png"></image>
+          <text>已完成</text>
+        </view>
+        <view class="msgDot">{{counts.count3}}</view>
+      </view>
+      <view class="item today" data-class="3" bindtap="goAllOrder">
+        <view class="inside">
+          <image src="../../image/icon/omit.png"></image>
+          <text>全部</text>
+        </view>
+        <!--<view class="msgDot">106</view>-->
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!--客户-->
+<view wx:if="{{userRole==0}}" class="customerBg">
+    <!--<view class="submitTit">
+      <text>服务申请</text>
+    </view>-->
+
+    <view class="scroll_view_vertical">
+    <view class="submit_item submit_item_sm">
+          <text class="submit_item_tit">服务方式：</text>
+          <picker bindchange="bindPickerChange" value="{{wayIndex}}" range="{{waysArray}}">
+    <view class="insidePicker">
+      {{waysArray[wayIndex]}}
+      <image class="arrowdown" src="../../image/icon-arrowdown.png"></image>
+    </view>
+  </picker>
+          <!--<input bindinput="chooseServiceWay" value="{{serviceWay}}" placeholder="填写服务方式" />-->
+        </view>
+
+        <view class="submit_item submit_item_sm">
+          <text class="submit_item_tit">预约上门时间：</text>
+          <picker mode="date" value="{{date}}" start="{{date}}"  
+bindchange="bindDateChange" >
+          <view class="insidePicker">{{date}}
+            <image class="arrowdown" src="../../image/icon-arrowdown.png"></image>
+          </view>
+          
+          </picker>
+        </view>
+
+        <view class="submit_item submit_item_sm">
+          <text class="submit_item_tit">问题描述：</text>
+          <!--<input bindinput="chooseDetail" value="{{probelmDetail}}" placeholder="填写问题描述" />-->
+          <textarea placeholder="填写问题描述" bindinput="chooseDetail" value="{{probelmDetail}}"/>
+        </view>
+
+        <view class="submit_item submit_item_bg">
+          <text class="submit_item_tit">附加信息：</text>
+          <image class="initialImg" wx:if="{{attachImg.length<=0}}" src="../../image/icon/img.png"></image>
+
+          <view class="uploadImgBox" wx:for="{{attachImg}}">
+            <image  class="addIcon" src="{{item}}"  data-url="{{attachImg[index]}}" mode="scaleToFill"  bindtap="previewImage"></image>
+            <image src="../../image/icon_delete.png" bindtap="toDeleteImg" data-index="{{index}}" class="delIcon"/>
+          </view>
+          <button bindtap="chooseImage" class="addInfo" >添加图片</button>
+        </view>
+
+        <view class="submit_item submit_item_bg">
+          <text class="submit_item_tit hasBorder"></text>
+          <image class="initialImg" wx:if="{{attachVideo.length<=0}}" src="../../image/icon/video.png"></image>
+          <view class="uploadImgBox" wx:for="{{attachVideo}}">
+           <video class="addIcon" id="myVideo" src="{{item}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+            <image src="../../image/icon_delete.png" bindtap="toDeleteVideo" data-index="{{index}}" class="delIcon"/>
+          </view>
+          <button bindtap="chooseVideo" class="addInfo">添加视频</button>
+        </view>
+
+
+        <view class="submit_item" wx:if="{{address}}" bindtap="chooseAddress">
+          <text class="submit_item_tit">联系信息：</text>
+          <view class="address">
+            <view class="address_item contact">
+              <text>联系人：{{address.fname}}</text>
+              <text>电话：{{address.fmobile}}</text>
+            </view>
+            <view class="address_item detail">
+              <text>{{address.fprovince+address.fcity+address.farea+address.faddress}}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="noAddress"  bindtap="chooseAddress" wx:if="{{!address}}">
+        <text class="submit_item_tit">联系信息：</text>
+        <view class="alignLeft">
+            <image class="add_address" src="../../image/icon/add.png"></image>
+            <text>请选择联系信息</text>
+        </view>
+    </view>
+    <button type="warn" class="submitBt" bindtap="submitApply" disabled="{{canDo}}">提交</button>
+</view>
+
+   
+</view>
+
+<!--<view class="mask" wx:if="{{ifSigned==false && userRole==0}}">
+  <view class="signBox">
+    <text class="signTit">注册</text>
+    <view class="sign_item">
+      <input class="phoneInput" placeholder="请输入您的手机号" bindinput="changePhone" value="{{signPhone}}"/>
+    </view>
+    <view class="sign_item">
+      <input class="codeInput" placeholder="请输入验证码" bindinput="changeCode" value="{{signCode}}"/>
+      <view class="identifyingCode" bindtap="toGetCode">{{timerCount}}        </view>
+    </view>
+    <button class="confirmBt" bindtap="confirmTosign">确定</button>
+  </view>
+</view>-->
+
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

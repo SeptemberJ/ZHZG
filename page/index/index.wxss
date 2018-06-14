@@ -1,0 +1,148 @@
+
+/*topLine*/
+.topLine{
+  width: 100%;
+  /*width:calc(100% - 20rpx);*/
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1296db;
+  /*padding: 0 10rpx;*/
+}
+.topLine_item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.topLine_item text{
+  color: #fff;
+}
+.topLine_item image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.topLine_item_left{
+  justify-content: flex-start;
+}
+.topLine_item_right{
+  justify-content: flex-end;
+}
+/*swiper*/
+swiper{
+  height: 200px;
+}
+swiper-item image {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+/*modules*/
+.modules{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.module{
+  width: 25%;
+  height: 187rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.module image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+/**/
+.marquee {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+
+}
+
+.marquee_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.marquee_text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+}
+
+/*userDefined*/
+.userDefined{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0rpx auto;
+  background: #1296db;
+}
+.active{
+  /*background: #1296db;*/
+  color: #fff;
+}
+.userDefined_item{
+  width:25%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*loading*/
+.loading{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32rpx;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*GPS*/
+.GPS{
+  width: 100%;
+  height: 80rpx;
+  /*position: fixed;
+  left: 0;
+  bottom: 0rpx;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.GPS text{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  
+}
+.distance{
+  background: #fff;
+}
+.toNavigation{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #1296db;
+  /*background: #1296db;
+  color: #fff;*/
+}

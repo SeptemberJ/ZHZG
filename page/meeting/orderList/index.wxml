@@ -1,0 +1,43 @@
+<view class="topTab">
+  <text class="leftRadius" bindtap="toOrder">我要预约</text>
+  <text class="rightRadius active">我的预约</text>
+</view>
+
+<!--resultList-->
+<view class="orderList" wx:if="{{orderList.length>0}}">
+  <view class="listWrap"  wx:for="{{orderList}}">
+    <view class="blank" wx:if="{{index!=0}}"></view>
+    <!--订单头部信息-->
+    <view class="orderTopInfo">
+      <text>订单号:{{item.ORDERNO}}</text>
+      <text>总价:¥{{item.TOTAL}}</text>
+    </view>
+    <!--所定会议室信息-->
+    <view class="list_item">
+      <view class="legtImg">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="midInfo">
+        <text>{{item.FNAME}}</text>
+        <text>可容纳{{item.FNUMBER}}人 ¥{{item.FPRICE}}/小时</text>
+        <text>{{item.FADDRESS}}</text>
+        <text>{{item.FBEGINTIME1}}至{{item.FENDTIME1}}</text>
+      </view>
+      <!--<view class="rightBt" data-id="{{item.ID}}">
+        <image src="../../../../image/icon/orderMeeting.png"></image>
+      </view>-->
+    </view>
+    <!--订单操作-->
+    <!--<view class="operationBar">
+      <view class="operation_item">删除订单</view>
+    </view>-->
+  </view>
+</view>
+<view wx:if="{{orderList.length<0}}" class="noData">
+  <image src="../../../image/icon/noData.png"></image>
+  <text>暂无预约单!</text>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

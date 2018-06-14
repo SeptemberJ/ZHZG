@@ -1,0 +1,166 @@
+.topTab{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topTab text{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.leftRadius{
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  border: 1px solid #1296db;
+}
+.rightRadius{
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  border: 1px solid #1296db;
+}
+.active{
+  background: #1296db;
+  color: #fff;
+}
+/*result*/
+.orderList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.listWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.orderTopInfo{
+  /*width: 100%;*/
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25rpx;
+}
+.orderTopInfo text{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.orderTopInfo text:last-of-type{
+  text-align: right;
+}
+.list_item{
+  width: 750rpx;
+  height: 170rpx;
+  padding: 10rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.legtImg{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.legtImg image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.midInfo{
+  width: 550rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.midInfo text{
+  width: 100%;
+  height: 50rpx;
+  color: #333;
+  font-size: 23rpx;
+}
+.midInfo text:first-of-type{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.rightBt{
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rightBt image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/*operation*/
+.operationBar{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 25rpx;
+  border-top:1px solid #eee;
+}
+.operation_item{
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5rpx;
+}
+
+
+
+
+/*.item_line{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+}
+.item_line text{
+  width: 100%;
+  height: 100%;
+  line-height: 60rpx;
+}
+.operation{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+	margin: 20rpx auto; 
+
+}
+.evaluateBt,.cancelBt,.logisticsBt,.confirmBt,.payBt{
+  width: 150rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f60;
+  color: #fff;
+  border-radius: 5rpx;
+  margin: auto 10rpx;
+}
+.gray{
+  background: #ccc;
+  color: #fff;
+}
+.cancelBt,.logisticsBt{
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}*/

@@ -1,0 +1,21 @@
+<!--userinfo-->
+<view class="userinfo">
+	<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap="chooseImage"></image>
+	<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<view bindtap="navigateToAddress" class="tableviewcell">
+	<image src="../../../image/icon/address.png" />
+	<text>联系地址</text>
+	<view class="right">
+		<image  data-index="{{index}}" src="../../../image/icon-arrowdown.png" />
+	</view>
+</view>
+
+<view  class="tableviewcell" bindtap="makeCall" data-tel="15901643801">
+	<image src="../../../image/icon/customerService.png" />
+	<text>客服电话</text>
+	<view class="right">15901643801
+	</view>
+</view>
+

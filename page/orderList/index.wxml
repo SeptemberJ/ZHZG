@@ -1,0 +1,24 @@
+<view class="bgImg">
+  <!--<text>{{kind}}</text>-->
+</view>
+<!--orderList-->
+<view class="container">
+  <view class="orderList" wx:if="{{orderList.length>0}}">
+      <view class="orderItem" wx:for="{{orderList}}" data-fbillno="{{item.fbillno}}" bindtap="toDetail">
+        <view class="itemLeft">
+          <view class="leftTop">{{item.fdate}}</view>
+          <view class="leftBot">{{item.fbillno}}</view>
+        </view>
+        <view class="itemRight">
+          <image wx:if="{{kind==0}}" src="../../image/icon/confirm.png"  ></image>
+          <image wx:if="{{kind!=0}}"src="../../image/icon/arrowRight.png" ></image>
+        </view>
+      </view>
+  </view>
+
+  <view wx:else class="noData">
+    <image src="../../../image/icon/order-nodata.png"></image>
+    <text>暂无相关订单信息！</text>
+  </view>
+
+</view>

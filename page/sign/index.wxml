@@ -1,0 +1,29 @@
+<view class="signWrap">
+  <view class="signTit">补充用户信息</view>
+  <view class="signInside">
+    <view class="signMain">
+      <view class="sign_item">
+        <image src="../../image/icon/myWhite.png"></image>
+        <input class="inputItem" placeholder="姓名" placeholder-class="colorLight" value="{{fname}}" bindinput="changeFname"/>
+      </view>
+
+      <view class="sign_item">
+        <image src="../../image/icon/sex.png"></image>
+        <input class="inputItem" placeholder="性别" placeholder-class="colorLight" value="{{fsex}}" bindinput="changeFsex"/>
+      </view>
+
+      <view class="sign_item">
+        <image src="../../image/icon/addressWhite.png"></image>
+        <input class="inputItem addr" placeholder="地址" placeholder-class="colorLight" value="{{faddress}}" bindinput="changeFaddress"/>
+        <view class="chooseLocation" bindtap="chooseLocation">自动获取</view>
+      </view>
+
+      <view class="sign_item">
+        <image src="../../image/icon/enterprise.png"></image>
+        <input class="inputItem" placeholder="公司名称" placeholder-class="colorLight" value="{{fenterprise}}" bindinput="changeFenterprise"/>
+      </view>
+    </view>
+    <!--注册-->
+    <button class="sign" bindtap="toSign">提交</button>
+  </view>
+</view>

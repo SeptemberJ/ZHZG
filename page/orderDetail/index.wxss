@@ -1,0 +1,95 @@
+.firstItem{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firstItem text{
+  width: 100%;
+}
+.toright{
+  text-align: right;
+}
+.secondItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.secondItem text{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.thirdItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.tit{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.fourItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.fiveItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 40rpx auto;
+}
+.sixItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 40rpx auto;
+}
+.sixItem text{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+textarea{
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+  background: #f5f5f5;
+}
+
+.address{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 10rpx auto;
+	border-top: 1px solid #eee;
+  border-image: url('https://www.4008803828.com/wscxm/image/strap.jpg') 30 30 round;
+}
+.address_item{
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15rpx 0;
+}
+.dispatchImg{
+  width: 710rpx;
+  height: 500rpx;
+}
+.confirm{
+  width: 100%;
+  margin: 40rpx auto 0 auto;
+}

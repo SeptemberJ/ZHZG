@@ -1,0 +1,38 @@
+<view class="topTab">
+  <text class="leftRadius active">我要预约</text>
+  <text class="rightRadius" bindtap="toOrderList">我的预约</text>
+</view>
+
+<view class="meetingOrder">
+  <view class="meetingOrder_tit">
+    <image src="../../../image/icon/nail.png"></image>
+  </view>
+  <view class="meetingOrder_date">
+    <view class="date_column">
+      <text>开始</text>
+      <text>共{{duration}}分钟</text>
+      <text>结束</text>
+    </view>
+    <view class="date_column">
+      <view class="column_item">
+        <picker mode="date" value="{{dateS}}" start="{{nowDate}}" bindchange="bindDateSChange">
+          <view class="picker">{{dateS}}</view>
+        </picker>
+        <picker mode="time" value="{{timeS}}" bindchange="bindTimeSChange">
+          <view class="picker">{{timeS}}</view>
+        </picker>
+      </view>
+      <view class="column_item">
+        <picker mode="date" value="{{dateE}}" start="{{nowDate}}" bindchange="bindDateEChange">
+          <view class="picker">{{dateE}}</view>
+        </picker>
+        <picker mode="time" value="{{timeE}}"  bindchange="bindTimeEChange">
+          <view class="picker">{{timeE}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="meetingOrder_bot">
+    <button class="orderBt" bindtap="toOrderMeeting">立即预定</button>
+  </view>
+</view>

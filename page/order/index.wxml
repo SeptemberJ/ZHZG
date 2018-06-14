@@ -1,0 +1,62 @@
+<!--tab-->
+<view class="tab_block">
+	<view wx:if="{{userRole==0}}" wx:for="{{tabListC}}"  wx:key="" class="tab_item {{cur==index?'active':''}}" bindtap="changeTab" data-id="{{index}}">
+	<text>{{item}}</text>
+	</view>
+  <view wx:if="{{userRole==1}}" wx:for="{{tabListE}}"  wx:key="" class="tab_item {{cur==index?'active':''}}" bindtap="changeTab" data-id="{{index}}">
+	<text>{{item}}</text>
+	</view>
+</view>
+
+<!--orderList-->
+<view wx:if="{{orderList.length>0}}">
+	<view class="orderList" wx:for="{{orderList}}" wx:key="" bindtap="toDetail" data-fbillno="{{item.fbillno}}">
+    <view class="item top">
+      <text>{{item.fbillno}}</text>
+      <text class="toright">{{item.fdate}}</text>
+    </view>
+
+    <view class="item">
+      <text>服务方式：{{item.fservice}}</text>
+    </view>
+    <view class="item">
+      <text>预约上门时间：{{item.freserve_time}}</text>
+    </view>
+
+    <view class="address">
+			<view class="address_item contact">
+				<text>联系人：{{item.fcontact}}</text>
+				<text>电话：{{item.fmobile}}</text>
+			</view>
+			<view class="address_item detail">
+				<text>地址：{{item.faddress}}</text>
+			</view>
+		</view>
+
+
+		<!--<view class="orderNo">
+			<text>订单号:{{item.orderNo}}</text>
+		</view>-->
+		
+		
+
+		<!--<view class="address">
+			<view class="address_item contact">
+				<text>联系人：{{item.address.contact}}</text>
+				<text>电话：{{item.address.mobile}}</text>
+			</view>
+			<view class="address_item detail">
+				<text>地址：{{item.address.detail}}</text>
+			</view>
+		</view>-->
+	</view>
+</view>
+
+<view wx:else class="noData">
+  <image src="../../../image/icon/order-nodata.png"></image>
+  <text>暂无相关订单信息！</text>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

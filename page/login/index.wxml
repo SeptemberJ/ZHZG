@@ -1,0 +1,20 @@
+<view class="wrapper">
+  <view class="logoWrap">
+  <image src="../../image/logo.png"></image>
+  </view>
+  <view class="loginWrap">
+    <view class="login_item">
+      <view class="login_icon">
+        <image src="../../image/id.png"></image>
+      </view>
+      <input placeholder="请输入邮件id" bindinput="emailId"/>
+    </view>
+    <button class="submitBt"  disabled="{{canDo}}" bindtap="submitLogin">登录</button>
+  </view>
+</view>
+
+
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

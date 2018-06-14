@@ -1,0 +1,42 @@
+<!--orderTime-->
+<view class="orderTime">
+  <text>{{orderTime.fbegintime}}至{{orderTime.fendtime}}</text>
+</view>
+
+<!--inforList-->
+<view class="meetingList" wx:if="{{meetingList.length>0}}">
+  <view class="listWrap"  wx:for="{{meetingList}}">
+    <view class="blank"></view>
+    <view class="list_item">
+      <view class="legtImg">
+        <image src="{{item.FIMG}}"></image>
+      </view>
+      <view class="midInfo">
+        <view class="mid_top">
+          <view class="mid_top_left">
+            <text>{{item.FNAME}}</text>
+            <text>可容纳{{item.FCODE}}人 ¥{{item.FPRICE}}/小时</text>
+            <text>{{item.FADDRESS}}</text>
+          </view>
+
+          <view class="mid_top_right" data-id="{{item.FID}}" bindtap="toOrder">
+                <image src="../../../image/icon/orderMeeting.png"></image>
+          </view>
+        </view>
+        <view class="mid_bot">
+          <text>{{item.Fbegintime1}}至{{item.Fendtime1}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{meetingList.length<=0}}" class="blank"></view>
+<view wx:if="{{meetingList.length<=0}}" class="noData">
+  <image src="../../../image/icon/noData.png"></image>
+  <text>对不起,您选的这段时间内没有可用的会议室！</text>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

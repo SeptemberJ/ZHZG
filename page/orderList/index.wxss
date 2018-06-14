@@ -1,0 +1,83 @@
+.bgImg{
+  width: 100%;
+  height: 400rpx;
+   /*background-image: url(http://gaopin-preview.bj.bcebos.com/133203636207.jpg@!100);*/
+   background-image: url(http://gaopin-preview.bj.bcebos.com/133201957991.jpg@!420);
+  background-size: cover;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+.bgImg text{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orderList{
+  width: 710rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   margin-top: -40rpx;
+   padding: 0 20rpx;
+}
+.orderItem{
+  width: calc(100% - 40rpx);
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 0 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx #ccc;
+  border-radius: 10rpx;
+}
+.itemLeft{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.leftTop{
+  color: #000;
+  font-weight: bold;
+
+}
+.leftBot{
+  color: #acacac;
+}
+.itemRight{
+  width: 120rpx;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemRight image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.confirmBt{
+  width: 100%;
+  height:80rpx;
+  margin: 40rpx auto 0 auto;
+  background: red;
+  color: #fff;
+}
+
+

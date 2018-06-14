@@ -1,0 +1,75 @@
+.wrapper{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.logoWrap{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+.logoWrap image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.loginWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.login_item{
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.login_icon{
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+input{
+  width: 500rpx;
+  height: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 0 20rpx;
+}
+.addBlock{
+  width: 75%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.addBlock text{
+  width: 100%;
+  height: 100%;
+  color: #666;
+  font-size: 30rpx;
+}
+.addBlock text:nth-of-type(2){
+  text-align: right;
+}
+.submitBt{
+  width: 50%;
+  margin-top: 40px;
+  background: #1296db;
+  color: #fff;
+}

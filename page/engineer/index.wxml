@@ -1,0 +1,46 @@
+<!--工程师-->
+<view  class="container">
+  <view class="tit">
+    <text></text>
+  </view>
+  <!--四方格-->
+  <view class="fourBox">
+    <view class="line">
+      <view class="item wait" data-class="0" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/Bell.png"></image>
+          <text>待接单</text>
+        </view>
+        <view class="msgDot">{{counts.count1}}</view>
+      </view>
+      <view class="item today" data-class="1" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/today.png"></image>
+          <text>待维修</text>
+        </view>
+        <view class="msgDot">{{counts.count2}}</view>
+      </view>
+    </view>
+    <view class="line">
+      <view class="item wait" data-class="2" bindtap="goOrderList">
+        <view class="inside">
+          <image src="../../image/icon/maintain.png"></image>
+          <text>已完成</text>
+        </view>
+        <view class="msgDot">{{counts.count3}}</view>
+      </view>
+      <view class="item today" data-class="3" bindtap="goAllOrder">
+        <view class="inside">
+          <image src="../../image/icon/omit.png"></image>
+          <text>全部订单</text>
+        </view>
+        <!--<view class="msgDot">106</view>-->
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

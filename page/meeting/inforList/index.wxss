@@ -1,0 +1,115 @@
+.orderTime{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.meetingList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.listWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.list_item{
+  width: 750rpx;
+  height: 220rpx;
+  padding: 10rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.legtImg{
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.legtImg image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.midInfo{
+  width: 550rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.mid_top{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mid_top_left{
+  width: 450rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.mid_top_left text{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 23rpx;
+  color: #333;
+}
+.mid_top_left text:first-of-type{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.mid_top_right{
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mid_top_right image{
+  width: 80rpx;
+  height: 80rpx;
+  justify-content: center;
+}
+.mid_bot{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.mid_bot text{
+  font-size: 23rpx;
+}
+/*.midInfo text{
+  width: 100%;
+  height: 50rpx;
+  font-size: 22rpx;
+}
+.midInfo text:first-of-type{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.midInfo text:last-of-type{
+  color: #333;
+}
+.rightBt{
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rightBt image{
+  width: 80rpx;
+  height: 80rpx;
+}*/
